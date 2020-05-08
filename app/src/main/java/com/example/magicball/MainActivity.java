@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView ballI;
     private TextView respuesta;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (v.getId()){
             case R.id.boton:
-                 int random = Random().nextInt(respuestaArray.length);
+                 int random = new Random().nextInt(respuestaArray.length);
                  respuesta.setText(respuestaArray[random]);
 
                  break;
